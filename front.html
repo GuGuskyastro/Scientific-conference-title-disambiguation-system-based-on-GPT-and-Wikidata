@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conference Title Disambiguation system</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        #textInput {
+            width: 300px;
+            height: 30px;
+        }
+
+        #answerArea {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conference Title Disambiguation system</h1>
+    <input type="text" id="textInput" placeholder="your input text">
+    <br>
+    <label for="queryMethod">Select Query Method:</label>
+    <select id="queryMethod">
+        <option value="run1">Agent:One by one</option>
+        <option value="run2">Agent:Overall</option>
+    </select>
+    <br>
+    <button onclick="query()">Query</button>
+    <div id="answerArea"></div>
+
+    <script>
+        function query() {
+            var text = document.getElementById("textInput").value;
+            var queryMethod = document.getElementById("queryMethod").value;
+            var answerArea = document.getElementById("answerArea");
+
+            answerArea.innerText = "In processing...";
+
+            // send post request
+            fetch('/query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'text=' + encodeURIComponent(text) + '&queryMethod=' + encodeURIComponent(queryMethod),
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                var answer = data.answer;
+                answerArea.innerText = answer;  // show answer in webpage
+            })
+        }
+    </script>
+</body>
+</html>
+
+
