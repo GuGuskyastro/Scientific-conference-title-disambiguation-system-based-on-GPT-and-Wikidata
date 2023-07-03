@@ -2,7 +2,6 @@ from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import StringPromptTemplate
-
 from langchain.schema import AgentAction, AgentFinish
 from langchain.agents import Tool, AgentExecutor, LLMSingleActionAgent, AgentOutputParser
 from typing import List, Union
@@ -14,23 +13,24 @@ import requests
 
 # This file is used to define the Langchain Agent process and required tools
 
-#Your openai api key
+# Your openai api key
 os.environ['OPENAI_API_KEY'] = ''
 
 client = weaviate.Client(
-        url="https://wikidata-f138wobj.weaviate.network",  # Your weaviate sandbox URL
-        auth_client_secret=weaviate.AuthApiKey(api_key=""), # Your weaviate API key
-        additional_headers={
-            "X-HuggingFace-Api-Key": ""  # Your inference API key
-        }
-    )
+    url="https://wikidata-f138wobj.weaviate.network",  # Your weaviate sandbox URL
+    auth_client_secret=weaviate.AuthApiKey(api_key=""),  # Your weaviate API key
+    additional_headers={
+        "X-HuggingFace-Api-Key": ""  # Your inference API key
+    }
+)
 
 # load openai llm
-llm = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 
 
-# Create extraction prompt template for parsing possible scientific conferences in the input text
 def extration(input):
+    # 创建模板
+    # 任务提示 / 内容选取提示
     fact_extraction_prompt = PromptTemplate(
         input_variables=["text_input"],
         template='''The following text entry is the citations section of a paper, which may contain one or more citations. 
@@ -145,13 +145,14 @@ tools = [
     )
 ]
 
-# Set up the base template for Agent
+# Set up the base template
 template = """
 You are now a text parsing assistant, and you receive a text of citations from a paper. Strictly follow the following workflow to complete the task:
+For each citation in the input text,
 1. Use the Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. If the results of this step show that there is no information on any conference, skip the second step.
-2. Use the Query tool to query conference title one by one, that is, one of the conference title returned by Extraction tool is used as the input of query tool. No matter what the returned result is, it will not affect you to continue to query the remaining conference titles. Never give short names as input to this tool! Only query titles parsed from user input, never invent new ones yourself! Repeat this step until all conference in step 1 result are judged. 
+2. Use the Query tool to query conference title, that is, the conference title returned by Extraction tool is used as the input of query tool. 
 
-After operating all steps, summarize the results and give the final answer like:
+After operating all citations, summarize the results and give the final answer like:
 There are a total of x citations in the input text (which is the user input), of which y contain scientific conference information. Following is extracted meeting information:
 properties: {{
         Citation text: {{"type": "string"}},
@@ -172,7 +173,7 @@ You have access to the following tools:
 Use the following format:
 
 Question: the input text from user
-Thought: Think about what you need to do
+Thought: Think about what you need to do.
 Action: the action to take, should be one of [{tool_names}]
 Action Input: the input to the tool. 
 Observation: the result of the action
@@ -181,7 +182,7 @@ Observation: the result of the action
 Thought: I now know the final answer
 Final Answer: the final answer according to the previous tips
 
-Text from user: {input}
+Question: {input}
 {agent_scratchpad}"""
 
 
@@ -219,6 +220,7 @@ prompt = CustomPromptTemplate(
     input_variables=["input", "intermediate_steps"],
 )
 
+
 class CustomOutputParser(AgentOutputParser):
     def parse(self, llm_output: str) -> Union[AgentAction, AgentFinish]:
         # Check if agent should finish
@@ -241,6 +243,7 @@ class CustomOutputParser(AgentOutputParser):
             tool=action, tool_input=action_input.strip(" ").strip('"'), log=llm_output
         )
 
+
 output_parser = CustomOutputParser()
 
 tool_names = [tool.name for tool in tools]
@@ -256,8 +259,6 @@ agent = LLMSingleActionAgent(
 
 agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True)
 
-
 # Execute Agent operations
-def run2(text):
+def run1(text):
     return agent_executor.run(text)
-

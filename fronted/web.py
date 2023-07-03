@@ -1,26 +1,32 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from urllib.parse import parse_qs
+from urllib.parse import urlparse, parse_qs
 import json
-from backend.Agent import run
+from backend.Agent import run2
+from backend.AgentOneByOne import run1
 
 
-def process_query(text):
-    answer = run(text)
+def process_query(text, query_method):
+    if query_method == 'run1':
+        answer = run1(text)
+    elif query_method == 'run2':
+        answer = run2(text)
+    else:
+        answer = 'Invalid query method'
+
     return answer
 
-# define HTTP requests
 class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        # parse requests
+        # 解析请求的内容
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length).decode('utf-8')
         params = parse_qs(post_data)
 
         text = params.get('text', [''])[0]
+        query_method = params.get('queryMethod', ['run1'])[0]
 
-        answer = process_query(text)
+        answer = process_query(text, query_method)
 
-        # Json response
         response = {'answer': answer}
         json_response = json.dumps(response)
 
@@ -28,7 +34,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
 
-        # send answer as response
         self.wfile.write(json_response.encode('utf-8'))
 
     def do_GET(self):
@@ -48,12 +53,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b'404 Not Found')
 
-# Create HTTP server and listen port
+
 def run_server(port):
     server_address = ('', port)
     httpd = HTTPServer(server_address, RequestHandler)
     print(f'Starting server on port {port}...')
     httpd.serve_forever()
+
 
 if __name__ == '__main__':
     run_server(8000)
