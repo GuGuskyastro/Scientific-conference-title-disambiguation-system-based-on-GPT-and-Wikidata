@@ -29,8 +29,6 @@ llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 
 
 def extration(input):
-    # 创建模板
-    # 任务提示 / 内容选取提示
     fact_extraction_prompt = PromptTemplate(
         input_variables=["text_input"],
         template='''The following text entry is the citations section of a paper, which may contain one or more citations. 

@@ -48,7 +48,6 @@ def extration(input):
 
         text:\n\n {text_input}'''
     )
-    # 定义chain
     fact_extraction_chain = LLMChain(llm=llm, prompt=fact_extraction_prompt)
     facts = fact_extraction_chain.run(input)
     return facts
