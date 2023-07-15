@@ -1,6 +1,6 @@
-from api_connector import APIConnector
-from agent_utils import AgentUtils
-from agent_build import AgentBuilder
+from backend.api_connector import APIConnector
+from backend.agent_utils import AgentUtils
+from backend.agent_build import AgentBuilder
 from langchain.agents import Tool
 
 
