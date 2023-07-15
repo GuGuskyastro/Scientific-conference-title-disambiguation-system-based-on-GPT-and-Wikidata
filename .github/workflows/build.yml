@@ -31,9 +31,9 @@ jobs:
     - name: Set up Secrets
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
-        echo "WEAVIATE_URL=${{ secrets.WEAVIATE_URL }}" >> $GITHUB_ENV
-        echo "WEAVIATE_API_KEY=${{ secrets.WEAVIATE_API_KEY }}" >> $GITHUB_ENV
-        echo "HUGGINGFACE_API_KEY=${{ secrets.HUGGINGFACE_API_KEY }}" >> $GITHUB_ENV
+        WEAVIATE_URL: ${{ secrets.WEAVIATE_URL }}
+        WEAVIATE_API_KEY: ${{ secrets.WEAVIATE_API_KEY }}
+        HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
     - name: Run tests
       run: |
         python -m unittest discover -s test -p '*Test.py'
