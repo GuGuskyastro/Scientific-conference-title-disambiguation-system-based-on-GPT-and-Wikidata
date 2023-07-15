@@ -12,7 +12,7 @@ class APIConnector:
 
         # Weaviate client
         self.client = weaviate.Client(
-            url='${{ secrets.WEAVIATE_URL }}',
+            url='https://wikidata-conference-29371kq4.weaviate.network',
             auth_client_secret=weaviate.AuthApiKey(api_key='${{ secrets.WEAVIATE_API_KEY }}'),
             additional_headers={
                 "X-HuggingFace-Api-Key": '${{ secrets.HUGGINGFACE_API_KEY }}'
