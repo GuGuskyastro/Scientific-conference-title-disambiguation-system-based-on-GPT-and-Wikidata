@@ -9,6 +9,7 @@ class APIConnector:
     def __init__(self):
         # OpenAI API key
         os.environ['OPENAI_API_KEY']
+        
         # Weaviate client
         self.client = weaviate.Client(
             url=os.environ['WEAVIATE_URL'],
