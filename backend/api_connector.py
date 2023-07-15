@@ -13,7 +13,7 @@ class APIConnector:
         # Weaviate client
         self.client = weaviate.Client(
             url='${{ secrets.WEAVIATE_URL }}',
-            auth_client_secret=weaviate.AuthApiKey(api_key=0'${{ secrets.WEAVIATE_API_KEY }}'),
+            auth_client_secret=weaviate.AuthApiKey(api_key='${{ secrets.WEAVIATE_API_KEY }}'),
             additional_headers={
                 "X-HuggingFace-Api-Key": '${{ secrets.HUGGINGFACE_API_KEY }}'
             }
