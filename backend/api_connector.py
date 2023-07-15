@@ -8,14 +8,14 @@ from langchain.chat_models import ChatOpenAI
 class APIConnector:
     def __init__(self):
         # OpenAI API key
-        os.environ['OPENAI_API_KEY'] = ''
+        os.environ['OPENAI_API_KEY'] = '${{ secrets.OPENAI_API_KEY }}'
 
         # Weaviate client
         self.client = weaviate.Client(
-            url="",
-            auth_client_secret=weaviate.AuthApiKey(api_key=""),
+            url="${{ secrets.WEAVIATE_URL }}",
+            auth_client_secret=weaviate.AuthApiKey(api_key="${{ secrets.WEAVIATE_API_KEY }}"),
             additional_headers={
-                "X-HuggingFace-Api-Key": ""
+                "X-HuggingFace-Api-Key": "${{ secrets.HUGGINGFACE_API_KEY }}"
             }
         )
 
