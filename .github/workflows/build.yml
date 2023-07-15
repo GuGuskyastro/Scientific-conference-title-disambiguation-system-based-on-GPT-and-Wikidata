@@ -28,4 +28,4 @@ jobs:
         python -m pip install --upgrade pip
     - name: Install dependencies
       run: |
-        script/install
+        pip install -r requirements.txt
