@@ -1,0 +1,35 @@
+Test File: citation3.txt
+Run Time: 78.7916 seconds
+Log:
+There are a total of 5 citations in the input text, of which 4 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: International Conference on Learning Representations, 2019."
+   Conference title: "International Conference on Learning Representations 2019"
+   Conference short name: "ICLR 2019"
+   Conference Qid: "Q62437033"
+   Conference startDate: "2019-05-06"
+   Conference endDate: "2019-05-09"
+   Conference location: "New Orleans Morial Convention Center"
+   Conference officialWebsite: "https://iclr.cc/Conferences/2019/"
+
+2. Citation text: "F. Wu, Y. Qiao, J.-H. Chen, C. Wu, T. Qi, J. Lian, D. Liu, X. Xie, J. Gao, W. Wu, et al., Mind: A large-scale dataset for news recommendation, in: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, 2020, pp. 3597–3606."
+   Conference title: "Annual Meeting of the Association for Computational Linguistics 2020"
+   Conference short name: "ACL 2020"
+   Conference Qid: "Q64994981"
+   Conference startDate: "2020-07-05"
+   Conference endDate: "2020-07-10"
+   Conference location: "Hyatt Regency Seattle"
+   Conference officialWebsite: "https://acl2020.org/"
+
+3. Citation text: "A. Dekhtyar, M. I. Dekhtyar, V. S. Subrahmanian, Temporal probabilistic logic programs, in: International Conference on Logic Programming, 1999, p. 109–123."
+   Conference title: "International Conference on Logic Programming 1999"
+   Conference short name: "ICLP 1999"
+   (No additional metadata available)
+
+4. Citation text: "D. Karagiannis, R. A. Buchmann, A proposal for deploying hybrid knowledge bases: the ADOxx-to-GraphDB interoperability case, in: Proceedings of the 51st Hawaii International Conference on System Sciences, HICSS 2018, AIS eLibrary, 2018."
+   Conference title: "Hawaii International Conference on System Sciences 2018"
+   Conference short name: "HICSS 2018"
+   (No additional metadata available)
+
+5. Citation text: "Armen Aghajanyan, Dmytro Okhonko, Mike Lewis, Mandar Joshi, Hu Xu, Gargi Ghosh, and Luke Zettlemoyer. 2021. Htlm: Hyper-text pre-training and prompting of language models."
+   (No conference information available)

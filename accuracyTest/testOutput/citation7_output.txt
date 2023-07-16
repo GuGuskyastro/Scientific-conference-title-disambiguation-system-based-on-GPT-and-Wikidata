@@ -1,0 +1,23 @@
+Test File: citation7.txt
+Run Time: 71.0816 seconds
+Log:
+There are a total of 5 citations in the input text, of which 3 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "R. Telatko, G. Maurer and D. Reichelt, "Event-Based Data Acquisition for Production Process Analyses: A Systematic Mapping Study," 2021 13th International Conference on Computer and Automation Engineering (ICCAE), Melbourne, Australia, 2021, pp. 105-110, doi: 10.1109/ICCAE51876.2021.9426134."
+   Conference title: "13th International Conference on Computer and Automation Engineering 2021"
+   Conference short name: "ICCAE 2021"
+
+2. Citation text: "Kingma, D. P. and Ba, J., "Adam: A method for stochastic optimization," in International Conference on Learning Representations, 2015."
+   Conference title: "International Conference on Learning Representations 2015"
+   Conference short name: "ICLR 2015"
+   Conference Qid: "Q86968250"
+   Conference startDate: "2015-05-07"
+   Conference endDate: "2015-05-09"
+   Conference location: "San Diego"
+   Conference officialWebsite: "https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:main.html"
+
+3. Citation text: "Q. Gong, and G. Chenwei A Baseline modeling algorithm for internet port scanning radiation flows. 2021 IEEE 6th International Conference on Signal and Image Processing (ICSIP). IEEE, 2021."
+   Conference title: "IEEE 6th International Conference on Signal and Image Processing 2021"
+   Conference short name: "ICSIP 2021"
+
+Note: The remaining citations do not contain any conference information.

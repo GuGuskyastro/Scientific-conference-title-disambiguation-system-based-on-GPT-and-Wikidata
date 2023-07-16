@@ -1,0 +1,30 @@
+Test File: citation5.txt
+Run Time: 73.1642 seconds
+Log:
+There are a total of 5 citations in the input text, of which 4 contain conference information. Following is extracted meeting information:
+
+1. Citation text: "Per-Åke Larson and H. Z. Yang. 1985. Computing Queries from Derived Relations. In 11th International Conference on Very Large Data Bases (VLDB). 259–269."
+   Conference title: "International Conference on Very Large Data Bases 1985"
+   Conference short name: "VLDB 1985"
+   Conference Qid: "Q113715793"
+   Conference startDate: "1985-08-21"
+   Conference endDate: "1985-08-23"
+   Conference location: "Stockholm"
+   Conference officialWebsite: ""
+
+2. Citation text: "C. Stab, I. Gurevych, Identifying argumentative discourse structures in persuasive essays, in: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP), 2014, pp. 46–56."
+   Conference title: "Conference on Empirical Methods in Natural Language Processing 2014"
+   Conference short name: "EMNLP 2014"
+   Conference Qid: "Q109527583"
+   Conference startDate: "2014-10-25"
+   Conference endDate: "2014-10-29"
+   Conference location: "Doha"
+   Conference officialWebsite: "https://aclanthology.org/events/emnlp-2014"
+
+3. Citation text: "S. Chiramel, D. Logofătu, G. Goldenthal, Detection of social media platform insults using natural language processing and comparative study of machine learning algorithms, in: 2020 24th International Conference on System Theory, Control and Computing (ICSTCC), IEEE, 2020, pp. 98–101."
+   Conference title: "International Conference on System Theory, Control and Computing 2020"
+   Conference short name: "ICSTCC 2020"
+
+4. Citation text: "The LDBC Social Network Benchmark: Interactive Workload. In: Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data. pp. 619–630 (2015)"
+   Conference title: "ACM SIGMOD International Conference on Management of Data 2015"
+   Conference short name: "SIGMOD 2015"

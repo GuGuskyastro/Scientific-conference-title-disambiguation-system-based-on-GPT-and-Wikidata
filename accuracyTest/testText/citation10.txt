@@ -1,0 +1,9 @@
+A. Garcia-Holgado, C. Deco, N. Bredegal-Alpaca, C. Bender, K. O. Villalba-Condori, Perception of the gender gap in computer engineering studies: a comparative study in peru and argentina, in: 2020 IEEE Global Engineering Education Conference (EDUCON), 2020, pp. 1252–1258. doi:10.1109/EDUCON45650.2020.9125224.
+
+M. Komar, V. Golovko, A. Sachenko and S. Bezobrazov, "Intelligent system for detection of networking intrusion," Proceedings of the 6th IEEE International Conference on Intelligent Data Acquisition and Advanced Computing Systems, Prague, Czech Republic, 2011, pp. 374-377, doi: 10.1109/IDAACS.2011.6072777
+
+H. Liu, L. Wang, Remote human–robot collaboration: A cyber–physical system application for hazard manufacturing environment, Journal of manufacturing systems 54 (2020) 24–34.
+
+B. Cetin, A. Lazar, J. Kim, A. Sim, and K. Wu, “Federated Wireless Network Intrusion Detection,” en, in 2019 IEEE International Conference on Big Data (Big Data), Los Angeles, CA, USA: IEEE,2019. (visited on 10/25/2021).
+
+M. Kaya, H. Ş. Bilge, Deep metric learning: A survey, Symmetry 11 (2019) 1066

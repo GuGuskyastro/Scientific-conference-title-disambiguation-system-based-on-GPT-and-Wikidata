@@ -1,0 +1,9 @@
+Per-Åke Larson and H. Z. Yang. 1985. Computing Queries from Derived Relations. In 11th International Conference on Very Large Data Bases (VLDB). 259–269.
+
+C. Stab, I. Gurevych, Identifying argumentative discourse structures in persuasive essays, in: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP), 2014, pp. 46–56.
+
+S. Chiramel, D. Logofătu, G. Goldenthal, Detection of social media platform insults using natural language processing and comparative study of machine learning algorithms, in: 2020 24th International Conference on System Theory, Control and Computing (ICSTCC), IEEE, 2020, pp. 98–101.
+
+Erling, O., Averbuch, A., Larriba-Pey, J., Chafi, H., Gubichev, A., Prat, A., Pham, M.D., Boncz, P.: The LDBC Social Network Benchmark: Interactive Workload. In: Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data. pp. 619–630 (2015)
+
+O. et al., Dota 2 with Large Scale Deep Reinforcement Learning, 2019.

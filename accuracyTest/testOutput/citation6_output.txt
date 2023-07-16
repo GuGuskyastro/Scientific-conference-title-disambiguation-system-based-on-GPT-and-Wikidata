@@ -1,0 +1,21 @@
+Test File: citation6.txt
+Run Time: 58.2993 seconds
+Log:
+There are a total of 5 citations in the input text, of which 3 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "F. Ardilla, AS Azhar and K. Naoyuki Batch Learning Growing Neural Gas for Sequential Point Cloud Processing. 2022 IEEE International Conference on Systems, Man, and Cybernetics (SMC). IEEE, 2022."
+   Conference title: "IEEE International Conference on Systems, Man, and Cybernetics 2022"
+   Conference short name: "SMC 2022"
+
+2. Citation text: "F. Strub, M. Seurin, E. Perez, H. De Vries, J. Mary, P. Preux, A. C. Pietquin, Visual reasoning with multi-hop feature modulation, in: Proceedings of the European Conference on Computer Vision (ECCV), 2018, pp. 784–800."
+   Conference title: "European Conference on Computer Vision 2018"
+   Conference short name: "ECCV 2018"
+   Conference Qid: "Q52799252"
+   Conference startDate: "2018-09-08"
+   Conference endDate: "2018-09-14"
+   Conference location: "Munich"
+   Conference officialWebsite: "https://eccv2018.org"
+
+3. Citation text: "M. Bettayeb, S. Ghunaim, N. Mohamed, and Q. Nasir. “Error correction codes in wireless sensor networks: a systematic literature review”. In 2019 International Conference on Communications, Signal Processing, and their Applications (ICCSPA). IEEE. (2019): 1-6 doi: 10.1109/ICCSPA.2019.8713725."
+   Conference title: "International Conference on Communications, Signal Processing, and their Applications 2019"
+   Conference short name: "ICCSPA 2019"

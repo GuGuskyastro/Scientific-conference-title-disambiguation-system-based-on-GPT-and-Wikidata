@@ -1,0 +1,9 @@
+K. Pichotta, R. Mooney, Statistical script learning with multi-argument events, in: Proceedings of the 14th Conference of the European Chapter of the Association for Computational Linguistics, 2014, pp. 220–229.
+
+R. Rudinger, P. Rastogi, F. Ferraro, B. Van Durme, Script induction as language modeling, in: Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing, 2015, pp. 1681– 1686.
+
+D. Karagiannis, Agile Modeling Method Engineering, in: 19th Panhellenic Conference on Informatics (PCI 2015), 2015, pp. 5–10.
+
+A. Piplai, M. Anoruo, K. Fasaye, A. Joshi, T. Finin, A. Ridley, Knowledge guided two-player reinforcement learning for cyber attacks and defenses, in: International Conference on Machine Learning and Applications, 2022.
+
+K.Mitnik, W.Simon, S.Wozniak, The art of deception, New York, Wiley, 2002.

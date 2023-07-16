@@ -1,0 +1,30 @@
+Test File: citation1.txt
+Run Time: 64.4634 seconds
+Log:
+There are a total of 5 citations in the input text, of which 4 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "K. Pichotta, R. Mooney, Statistical script learning with multi-argument events, in: Proceedings of the 14th Conference of the European Chapter of the Association for Computational Linguistics, 2014, pp. 220–229."
+   Conference title: "The 14th Conference of the European Chapter of the Association for Computational Linguistics"
+   Conference short name: "EACL 2014"
+   Conference Qid: "Q54366589"
+   Conference startDate: "2014-04-26"
+   Conference endDate: "2014-04-30"
+   Conference location: "Chalmers University of Technology"
+   Conference officialWebsite: "http://eacl2014.org/"
+
+2. Citation text: "R. Rudinger, P. Rastogi, F. Ferraro, B. Van Durme, Script induction as language modeling, in: Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing, 2015, pp. 1681– 1686."
+   Conference title: "The 2015 Conference on Empirical Methods in Natural Language Processing"
+   Conference short name: "EMNLP 2015"
+   Conference Qid: "Q109527582"
+   Conference startDate: "2015-09-17"
+   Conference endDate: "2015-09-21"
+   Conference location: "Lisbon"
+   Conference officialWebsite: "https://aclanthology.org/events/emnlp-2015/"
+
+3. Citation text: "D. Karagiannis, Agile Modeling Method Engineering, in: 19th Panhellenic Conference on Informatics (PCI 2015), 2015, pp. 5–10."
+   Conference title: "Panhellenic Conference on Informatics 2015"
+   Conference short name: "PCI 2015"
+
+4. Citation text: "A. Piplai, M. Anoruo, K. Fasaye, A. Joshi, T. Finin, A. Ridley, Knowledge guided two-player reinforcement learning for cyber attacks and defenses, in: International Conference on Machine Learning and Applications, 2022."
+   Conference title: "International Conference on Machine Learning and Applications 2022"
+   Conference short name: "ICMLA 2022"

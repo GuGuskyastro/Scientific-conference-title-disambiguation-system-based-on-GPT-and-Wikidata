@@ -1,0 +1,9 @@
+X. Feng, Z. Pan and X. Wang, "The Importance of Practical Subject in the Digital Prepress Design Teaching," 2016 Eighth International Conference on Measuring Technology and Mechatronics Automation (ICMTMA), Macau, China, 2016, pp. 788-791, doi: 10.1109/ICMTMA.2016.191.
+
+S. -H. Lam, E. Brewer and Y. -K. Ng, "Using a Deep Learning Model, Content Features, and Author Metadata to Recommend Research Papers," 2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science (IRI), Las Vegas, NV, USA, 2020, pp. 265- 270, doi: 10.1109/IRI49571.2020.00045.
+
+C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: International Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64.
+
+D. C. Knill, A. Pouget, The bayesian brain: the role of uncertainty in neural coding and computation, Trends in Neurosciences 27 (2004) 712–719.
+
+J. Bateman, Situating spatial language and the role of ontology: Issues and outlook, Language and Linguistics Compass 4 (2010) 639–664.

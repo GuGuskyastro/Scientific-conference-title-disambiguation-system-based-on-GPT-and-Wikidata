@@ -1,0 +1,10 @@
+F. Ardilla, AS Azhar and K. Naoyuki Batch Learning Growing Neural Gas for Sequential Point Cloud Processing. 2022 IEEE International Conference on Systems, Man, and Cybernetics (SMC). IEEE, 2022.
+
+F. Strub, M. Seurin, E. Perez, H. De Vries, J. Mary, P. Preux, A. C. Pietquin, Visual reasoning with multi-hop feature modulation, in: Proceedings of the European Conference on Computer Vision (ECCV), 2018, pp. 784–800.
+
+M. Bettayeb, S. Ghunaim, N. Mohamed, and Q. Nasir. “Error correction codes in wireless sensor networks: a systematic literature review”. In 2019 International Conference on Communications, Signal Processing, and their Applications (ICCSPA). IEEE. (2019): 1-6 doi: 10.1109/ICCSPA.2019.8713725.
+
+G. A. Feltham, The value of information, The Accounting Review (1968).
+
+B. Wilder, E. Horvitz, E. Kamar, Learning to Complement Humans (2020) 1526–1533. doi:10.24963/ijcai.2020/212.
+

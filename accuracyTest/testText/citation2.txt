@@ -1,0 +1,9 @@
+Jonathan Berant, Andrew Chou, Roy Frostig, and Percy Liang. 2013. Semantic parsing on Freebase from question-answer pairs. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing, pages 1533–1544, Seattle, Washington, USA.
+
+A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell,P. Mishkin, J. Clark, G. Krueger, I. Sutskever, Learning transferable visual models from natural language supervision, in: International Conference on Machine Learning, 2021.
+
+P. Sen, B. W. de Carvalho, R. Riegel, A. Gray, Neuro-symbolic inductive logic programming with logical neural networks, in: Proceedings of the AAAI Conference on Artificial Intelligence, volume 36, 2022, pp. 8212–8219.
+
+F. Pinto, P. H. S. Torr, P. K. Dokania, An impartial take to the cnn vs transformer robustness contest, in: European Conference on Computer Vision, 2022.
+
+Ricardo Baeza-Yates, Berthier Ribeiro-Neto, et al.1999. Modern information retrieval, volume 463.ACM press New York.

@@ -1,0 +1,27 @@
+Test File: citation2.txt
+Run Time: 82.1622 seconds
+Log:
+There are a total of 5 citations in the input text, of which 4 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "Jonathan Berant, Andrew Chou, Roy Frostig, and Percy Liang. 2013. Semantic parsing on Freebase from question-answer pairs. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing, pages 1533–1544, Seattle, Washington, USA."
+   Conference title: "Conference on Empirical Methods in Natural Language Processing 2013"
+   Conference short name: "EMNLP 2013"
+   Conference Qid: "Q109527338"
+   Conference startDate: "2013-10-18"
+   Conference endDate: "2013-10-21"
+   Conference location: "Seattle"
+   Conference officialWebsite: "https://aclanthology.org/events/emnlp-2013"
+
+2. Citation text: "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell,P. Mishkin, J. Clark, G. Krueger, I. Sutskever, Learning transferable visual models from natural language supervision, in: International Conference on Machine Learning, 2021."
+   Conference title: "International Conference on Machine Learning 2021"
+   Conference short name: "ICML 2021"
+
+3. Citation text: "P. Sen, B. W. de Carvalho, R. Riegel, A. Gray, Neuro-symbolic inductive logic programming with logical neural networks, in: Proceedings of the AAAI Conference on Artificial Intelligence, volume 36, 2022, pp. 8212–8219."
+   Conference title: "AAAI Conference on Artificial Intelligence 2022"
+   Conference short name: "AAAI 2022"
+
+4. Citation text: "F. Pinto, P. H. S. Torr, P. K. Dokania, An impartial take to the cnn vs transformer robustness contest, in: European Conference on Computer Vision, 2022."
+   Conference title: "European Conference on Computer Vision 2022"
+   Conference short name: "ECCV 2022"
+
+Note: The fifth citation does not contain any conference information.

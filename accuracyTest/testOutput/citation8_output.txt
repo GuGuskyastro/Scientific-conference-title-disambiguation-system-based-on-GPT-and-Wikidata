@@ -1,0 +1,16 @@
+Test File: citation8.txt
+Run Time: 82.6247 seconds
+Log:
+There are a total of 5 citations in the input text, of which 3 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "C. Guasch, G. Lodi, S. V. Dooren, Semantic knowledge graphs for distributed data spaces: The public procurement pilot experience, in: International Semantic Web Conference, Springer, 2022, pp. 753–769."
+   Conference title: "International Semantic Web Conference 2022"
+   Conference short name: "ISWC 2022"
+
+2. Citation text: "O. V. Bisikalo, V. V. Kovtun, and O. V. Kovtun, "Modeling of the Estimation of the Time to Failure of the Information System for Critical Use," 2020 10th International Conference on Advanced Computer Information Technologies (ACIT), Deggendorf, Germany, pp. 140-143, 2020. doi: 10.1109/ACIT49673.2020.9208883."
+   Conference title: "International Conference on Advanced Computer Information Technologies"
+   Conference short name: "ACIT 2020"
+
+3. Citation text: "J. Bao, H. Bechir W. Weng-Keen Iot device type identification using hybrid deep learning approach for increased iot security 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, 2020."
+   Conference title: "International Wireless Communications and Mobile Computing 2020"
+   Conference short name: "IWCMC 2020"

@@ -1,0 +1,9 @@
+KSaleem, M., Mehmood, Q., Ngonga Ngomo, A.C.: FEASIBLE: A Feature-Based SPARQL Benchmark Generation Framework. In: International Semantic Web Conference. pp. 52–69. Springer (2015)
+
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013. Distributed Representations of Words and Phrases and Their Compositionality. In Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2 (NIPS’13). Curran Associates Inc.,Lake Tahoe, Nevada, 3111–3119.
+
+K.-F. Kollias, C. K. Syriopoulou-Delli, P. Sarigiannidis, G. F. Fragulis, The contribution of machine learning and eye-tracking technology in autism spectrum disorder research: A review study, in: 2021 10th International Conference on Modern Circuits and Systems Technologies (MOCAST), IEEE, 2021, pp. 1–4.
+
+S. A. Mithbavkar, M. S. Shah, Recognition of emotion through facial expressions using emg signal, in: 2019 international conference on nascent technologies in engineering (ICNTE), IEEE, 2019, pp. 1–6.
+
+T. D. Nguyen, P. Rieger, H. Yalame, et al., “FLGUARD: Secure and Private Federated Learning,” en,arXiv:2101.02281 [cs], 2021. (visited on 05/18/2021).

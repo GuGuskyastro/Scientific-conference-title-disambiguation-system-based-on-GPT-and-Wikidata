@@ -1,0 +1,9 @@
+H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: International Conference on Learning Representations, 2019.
+
+F. Wu, Y. Qiao, J.-H. Chen, C. Wu, T. Qi, J. Lian, D. Liu, X. Xie, J. Gao, W. Wu, et al., Mind: A large-scale dataset for news recommendation, in: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, 2020, pp. 3597–3606.
+
+A. Dekhtyar, M. I. Dekhtyar, V. S. Subrahmanian, Temporal probabilistic logic programs, in: International Conference on Logic Programming, 1999, p. 109–123.
+
+D. Karagiannis, R. A. Buchmann, A proposal for deploying hybrid knowledge bases: the ADOxx-to-GraphDB interoperability case, in: Proceedings of the 51st Hawaii International Conference on System Sciences, HICSS 2018, AIS eLibrary, 2018.
+
+Armen Aghajanyan, Dmytro Okhonko, Mike Lewis,Mandar Joshi, Hu Xu, Gargi Ghosh, and Luke Zettlemoyer. 2021. Htlm: Hyper-text pre-training and prompting of language models.

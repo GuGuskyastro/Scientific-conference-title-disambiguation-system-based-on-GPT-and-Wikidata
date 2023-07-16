@@ -1,0 +1,16 @@
+Test File: citation9.txt
+Run Time: 63.6065 seconds
+Log:
+There are a total of 5 citations in the input text, of which 3 contain conference information. Following is the extracted meeting information:
+
+1. Citation text: "X. Feng, Z. Pan and X. Wang, "The Importance of Practical Subject in the Digital Prepress Design Teaching," 2016 Eighth International Conference on Measuring Technology and Mechatronics Automation (ICMTMA), Macau, China, 2016, pp. 788-791, doi: 10.1109/ICMTMA.2016.191."
+   Conference title: "Eighth International Conference on Measuring Technology and Mechatronics Automation 2016"
+   Conference short name: "ICMTMA 2016"
+
+2. Citation text: "S. -H. Lam, E. Brewer and Y. -K. Ng, "Using a Deep Learning Model, Content Features, and Author Metadata to Recommend Research Papers," 2020 IEEE 21st International Conference on Information Reuse and Integration for Data Science (IRI), Las Vegas, NV, USA, 2020, pp. 265- 270, doi: 10.1109/IRI49571.2020.00045."
+   Conference title: "IEEE 21st International Conference on Information Reuse and Integration for Data Science 2020"
+   Conference short name: "IRI 2020"
+
+3. Citation text: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: International Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64."
+   Conference title: "International Conference on Decision and Game Theory for Security 2013"
+   Conference short name: "Decision and Game Theory for Security 2013"
