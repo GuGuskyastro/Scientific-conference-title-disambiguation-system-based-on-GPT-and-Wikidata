@@ -48,20 +48,20 @@ The main file directory of the project is shown in the figure.
 │          citation10.txt
 │
 ├─backend
-│  │  agent_build.py                    # Build custom Agent, consistent with lancghain documentation
-│  │  agent_utils.py                    # Functions used by Agent tools
-│  │  api_connector.py                  # Connect GPT and Weaviate via API keys
-│  │  main.py                           
-│  │  weaviateQ.py
-│  │  __init__.py
+│     agent_build.py                    # Build custom Agent, consistent with lancghain documentation
+│     agent_utils.py                    # Functions used by Agent tools
+│     api_connector.py                  # Connect GPT and Weaviate via API keys
+│     main.py                           
+│     weaviateQ.py
+│    
 │
 ├─fronted
-│      front.html
-│      web.py
+│     front.html
+│     web.py
 │
 ├─test
-│      agentTest.py                    # Test when update code
-│      __init__.py
+│     agentTest.py                     # Test when update code
+│    
 
 
 ```
