@@ -27,7 +27,7 @@ template = """
 You are now a text parsing assistant, and you receive a text of citations from a paper. Strictly follow the following workflow to complete the task:
 For each citation in the input text,
 1. Use the Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. If the results of this step show that there is no information on any conference, skip the second step.
-2. Use the Query tool to query conference title, that is, the conference title returned by Extraction tool is used as the input of query tool. 
+2. Use the Query tool to query conference title, that is, the title returned by Extraction tool is used as the input of query tool. 
 
 After operating all citations, summarize the results and give the final answer like:
 There are a total of x citations in the input text (which is the user input), of which y contain scientific conference information. Following is extracted meeting information:
@@ -51,7 +51,7 @@ Use the following format:
 
 Question: the input text from user
 Thought: Think about what you need to do.
-Action: the action to take, should be one of [{tool_names}]
+Action: the action to take, should be one of [{tool_names}]!
 Action Input: the input to the tool. 
 Observation: the result of the action
 ... (this Thought/Action/Action Input/Observation can repeat N times)
