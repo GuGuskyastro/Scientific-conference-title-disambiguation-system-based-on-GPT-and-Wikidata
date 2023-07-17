@@ -61,8 +61,10 @@ The main file directory of the project is shown in the figure.
 │
 ├─test
 │     agentTest.py                     # Test when update code
-│    
-
-
+│
+│─WeaviateVS
+│      conference_data.json
+│      weaviateVS.py                   # Create a vector database based on wikidata metadata
+│      wikidataConferenceJson.py       
 ```
 
