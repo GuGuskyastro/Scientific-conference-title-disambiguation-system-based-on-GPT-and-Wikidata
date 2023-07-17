@@ -12,10 +12,29 @@ client = weaviate.Client(
 # ===== add schema =====
 class_obj = {
     "class": "Conference",
-    "vectorizer": "text2vec-huggingface",  # Can choose different vectorizers according to your needs
+    "properties": [ 
+        {
+            "name": "qid",
+            "dataType": ["text"],
+            'moduleConfig': {
+                'text2vec-huggingface': {
+                    'vectorizePropertyName': False
+                }
+            }
+        },
+        {
+            "name": "title",
+            "dataType": ["text"],
+        },
+        {
+            "name": "shortName",
+            "dataType": ["text"],
+        }
+    ],
+    "vectorizer": "text2vec-huggingface", # can choose different vectorizers according to needs
     "moduleConfig": {
         "text2vec-huggingface": {
-            "model": "sentence-transformers/all-MiniLM-L6-v2",
+            "model": "sentence-transformers/all-MiniLM-L6-v2", 
             "options": {
                 "waitForModel": True
             }
@@ -26,7 +45,6 @@ class_obj = {
 client.schema.create_class(class_obj)
 
 # ===== import data =====
-# Load data
 
 with open(r"conference_data.json","r",encoding="utf-8") as file: # Load the Json file you got
     data = json.load(file)
