@@ -1,15 +1,13 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
 import json
-from backend.Agent import run2
-from backend.AgentOneByOne import run1
+from backend.main import Agent
 
+agent = Agent()
 
 def process_query(text, query_method):
     if query_method == 'run1':
-        answer = run1(text)
-    elif query_method == 'run2':
-        answer = run2(text)
+        answer = Agent.run(agent,text)
     else:
         answer = 'Invalid query method'
 
@@ -17,7 +15,7 @@ def process_query(text, query_method):
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        # 解析请求的内容
+
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length).decode('utf-8')
         params = parse_qs(post_data)
