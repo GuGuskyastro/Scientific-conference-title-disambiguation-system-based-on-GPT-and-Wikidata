@@ -26,7 +26,7 @@ Langchain is currently a popular application framework for extending LLM, allowi
 
 ### Vector Database：
 ```
-weaviate_client==3.21.0
+weaviate_client 3.21.0
 ```
 ***Precautions：To clone the project and run it, make sure to keep the extension package as consistent as possible***
 
