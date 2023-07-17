@@ -32,6 +32,7 @@ weaviate_client==3.21.0
 
 + ### The main file directory of the project
 The main file directory of the project is shown in the figure.
+```
 
 ─accuracyTest
 │  │  acc_test.py                       # Testing the Processing Accuracy of Agent
