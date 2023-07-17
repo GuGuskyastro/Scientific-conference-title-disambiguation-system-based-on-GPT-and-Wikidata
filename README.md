@@ -4,7 +4,6 @@ The project uses a large-scale knowledge graph (wikidata) and vector database (w
 
 + [Project Introduction](#project-introduction)
 
-+ [Test Results](#Test Results)
 
 
 ## Project Introduction
@@ -64,5 +63,5 @@ The main file directory of the project is shown in the figure.
 │      __init__.py
 │
 
-## Test Results
+```
 
