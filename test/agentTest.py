@@ -21,7 +21,7 @@ class AgentTest(unittest.TestCase):
 
         text = "Jonathan Berant, Andrew Chou, Roy Frostig, and Percy Liang. 2013. Semantic parsing on Freebase from question-answer pairs. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing, pages 1533–1544, Seattle, Washington, USA."
         result = AgentUtils.extraction(AgentTest.utils, text)
-        self.assertIn('Conference short name: "EMNLP 2013"' , result)
+        self.assertIn('Conference short name: EMNLP 2013' , result)
 
 
     def test_weaviate(self):
