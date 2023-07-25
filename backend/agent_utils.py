@@ -1,6 +1,8 @@
 import re
 import json
 import requests
+import yaml
+import os
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
@@ -22,24 +24,14 @@ class AgentUtils:
 
          Returns:
              str: The extraction results include the original citations, possible conference titles and short name.
-         """
+        """
+        with open('backend/templates.yaml', 'r', encoding='utf-8') as file:
+            templates = yaml.safe_load(file)
+            fact_extraction_template = templates['fact_extraction_template']
 
         fact_extraction_prompt = PromptTemplate(
             input_variables=["text_input"],
-            template='''The following text entry is the citations section of a paper, which may contain one or more citations. 
-            Some of these citations may contain information for scientific conference, you need extract conference title and short name. give the answer in the following format for each citation:
-
-            properties: {{
-            Citation text: {{"type": "string"}},
-            Conference title: {{"type": "string"}},
-            Conference short name: {{"type": "string"}}}}
-
-            When extracting, do not appear "Proceedings of" in the Conference title. A simple example:Saleem, M., Mehmood, Q., Ngonga Ngomo, A.C.: FEASIBLE: A Feature-Based SPARQL Benchmark Generation Framework. In: Proceedings of 14th International Semantic Web Conference. pp. 52–69. Springer (2015),
-            the Conference title for this citation then should be like International Semantic Web Conference 2015. The short name then is ISWC 2015. The year must be added to the title.
-            References that do not mention scientific conferences can just use empty characters in the title and short name.
-            Only use the information in the text to extract. If all citations do not have scientific meetings, tell the user that your input does not have any scientific meetings.
-
-            text:\n\n {text_input}'''
+            template= fact_extraction_template
         )
         fact_extraction_chain = LLMChain(llm=self.llm, prompt=fact_extraction_prompt)
         facts = fact_extraction_chain.run(input)
@@ -123,12 +115,15 @@ class AgentUtils:
         )
         result = json.dumps(response)
         merged = "extrationTitle:" + title + '/queryResult:' + result
+
+        with open('backend/templates.yaml', 'r', encoding='utf-8') as file:
+            templates = yaml.safe_load(file)
+
+        weaviate_query_input_template = templates['weaviate_query_input_template']
+
         query_Input_prompt = PromptTemplate(
             input_variables=["text_input"],
-            template=''' I will give you two texts, one is the conference information I extracted, and the other is the query result of my database. Analyze whether the conference I extracted is also in the query result according to the queried short name and title, and answer me in template below:
-            The {{conferen title}} is/is not stored in the Database.(If stored then add)Its QID is {{QID}}.
-
-            Two text:{text_input}'''
+            template=weaviate_query_input_template
         )
         weaviateQuery_chain = LLMChain(llm=self.llm, prompt=query_Input_prompt)
         analysis_result = weaviateQuery_chain.run(merged)
