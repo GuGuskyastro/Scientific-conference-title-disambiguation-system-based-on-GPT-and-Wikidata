@@ -1,8 +1,7 @@
 import re
 import json
 import requests
-import yaml
-import os
+import yaml, os
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
@@ -25,7 +24,10 @@ class AgentUtils:
          Returns:
              str: The extraction results include the original citations, possible conference titles and short name.
         """
-        with open('backend/templates.yaml', 'r', encoding='utf-8') as file:
+
+        template = os.path.join(os.path.dirname(__file__), 'templates.yaml').replace("\\", "/")
+
+        with open(template, 'r', encoding='utf-8') as file:
             templates = yaml.safe_load(file)
             fact_extraction_template = templates['fact_extraction_template']
 
@@ -116,7 +118,8 @@ class AgentUtils:
         result = json.dumps(response)
         merged = "extrationTitle:" + title + '/queryResult:' + result
 
-        with open('backend/templates.yaml', 'r', encoding='utf-8') as file:
+        template = os.path.join(os.path.dirname(__file__), 'templates.yaml').replace("\\", "/")
+        with open(template, 'r', encoding='utf-8') as file:
             templates = yaml.safe_load(file)
 
         weaviate_query_input_template = templates['weaviate_query_input_template']
