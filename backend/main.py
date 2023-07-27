@@ -2,7 +2,7 @@ from backend.api_connector import APIConnector
 from backend.agent_utils import AgentUtils
 from backend.agent_build import AgentBuilder
 from langchain.agents import Tool
-import yaml
+import yaml,os
 from langchain.callbacks import get_openai_callback
 
 class Agent:
@@ -40,7 +40,9 @@ class Agent:
              str: complete analysis results including citation text and its corresponding conference information.
         """
 
-        with open('backend/templates.yaml', 'r', encoding='utf-8') as file:
+        template= os.path.join(os.path.dirname(__file__), 'templates.yaml').replace("\\", "/")
+
+        with open(template, 'r', encoding='utf-8') as file:
             templates = yaml.safe_load(file)
 
         base_templates = templates['base_template']
@@ -57,3 +59,4 @@ class Agent:
             response += f"\n{total_tokens}\n{total_cost}"
 
         return response
+
