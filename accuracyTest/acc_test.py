@@ -1,30 +1,33 @@
 import os
 import time
-from backend.main import run
+import ruamel.yaml as yaml
+from backend.main import Agent
 
 def run_tests():
-    test_dir = "testText"
-    output_dir = "testOutput"
-    os.makedirs(output_dir, exist_ok=True)
+    test_data_file = os.path.join(os.path.dirname(__file__), 'testText.yaml').replace("\\", "/")
+    output_file = "test_output.yaml"
+    agent = Agent()
 
-    test_files = os.listdir(test_dir)
-    for filename in test_files:
-        if filename.endswith(".txt"):
-            input_file_path = os.path.join(test_dir, filename)
-            output_file_path = os.path.join(output_dir, f"{filename.split('.')[0]}_output.txt")
+    with open(test_data_file, "r", encoding="utf-8") as test_data:
+        test_data = yaml.load(test_data)
 
-            with open(input_file_path, "r", encoding="utf-8") as file:
-                text = file.read()
+    results = {}
 
-            start_time = time.time()
-            output = run(text)
-            end_time = time.time()
+    for entry in test_data:
+        name = entry['name']
+        text = entry['text']
 
-            with open(output_file_path, "w", encoding="utf-8") as output_file:
-                output_file.write(f"Test File: {filename}\n")
-                output_file.write(f"Run Time: {end_time - start_time:.4f} seconds\n")
-                output_file.write("Log:\n")
-                output_file.write(output)
+        start_time = time.time()
+        output = Agent.run(agent, text, show_token=True)
+        end_time = time.time()
+
+        results[name] = {
+            'run_time': str(end_time - start_time) + ' second',
+            'result': output
+        }
+
+    with open(output_file, "w", encoding="utf-8") as output_file:
+        yaml.dump(results, output_file, default_style="|", default_flow_style=False, encoding="utf-8")
 
 if __name__ == "__main__":
     run_tests()
