@@ -24,12 +24,19 @@ weaviate_query_input_template: |
 
     Two text: {text_input}
 
+weaviate_query_input_template_new: |
+    Work document: {text_input}
+    The extensionTitle in the Work document is the unofficial conference title I extracted, and the queryResult is the fuzzy search result of this title in the database, the queryResult include official title and abbreviation. Analyze whether the conference I extracted is also in the query result.
+    Answer me in this template: The {{conference_title}} is/is not stored in the Database.(If stored then add)Its QID is {{QID}}.
+    Example: extensionTitle:International Conference on System Theory, Control and Computing 2020, queryResult: title: 23rd International Conference on System Theory, Control and Computing, shortName: ICSTCC 2019.
+    Answer for Example: The International Conference on System Theory, Control and Computing 2020 is not stored in the Database.
+
 
 base_template: |
-    You are now a text parsing assistant, and you receive a text of citations from a paper. Strictly follow the following workflow to complete the task:
+    You are now a text parsing assistant, and you receive a text of one or more citations from a paper. Strictly follow the following workflow to complete the task:
         For each citation in the input text,
-        1. Use the Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. If the results of this step show that there is no information on any conference, skip the second step.
-        2. Use the Query tool to query conference title, that is, the title returned by Extraction tool is used as the input of query tool. 
+        1. Use Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. If the results of this step show that there is no information on any conference, skip the second step.
+        2. Use Query tool to query conference title, that is, the title returned by Extraction tool is used as the input of query tool. 
         
         After operating all citations, summarize the results and give the final answer like:
         There are a total of x citations in the input text (which is the user input), of which y contain scientific conference information. Following is extracted meeting information:
@@ -53,7 +60,7 @@ base_template: |
         
         Question: the input text from user
         Thought: Think about what you need to do.
-        Action: the action to take, should be one of [{tool_names}]!
+        Action: Extraction / Query.
         Action Input: the input to the tool. 
         Observation: the result of the action
         ... (this Thought/Action/Action Input/Observation can repeat N times)

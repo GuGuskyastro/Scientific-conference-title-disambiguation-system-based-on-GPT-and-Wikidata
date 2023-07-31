@@ -77,11 +77,11 @@ class AgentUtils:
         conference_metadata = []
         for result in results:
             qid = result["QID"]["value"]
-            title = result["conferenceLabel"]["value"]
-            startDate = re.findall(r'\d{4}-\d{2}-\d{2}', result["startDate"]["value"])[0]
-            endDate = re.findall(r'\d{4}-\d{2}-\d{2}', result["endDate"]["value"])[0]
-            location = result["locationLabel"]["value"]
-            officialWebsite = result["officialWebsite"]["value"]
+            title = result.get("conferenceLabel", {}).get("value", "N/A")
+            startDate = re.findall(r'\d{4}-\d{2}-\d{2}', result.get("startDate", {}).get("value", ""))[0]
+            endDate = re.findall(r'\d{4}-\d{2}-\d{2}', result.get("endDate", {}).get("value", ""))[0]
+            location = result.get("locationLabel", {}).get("value", "N/A")
+            officialWebsite = result.get("officialWebsite", {}).get("value", "N/A")
 
             conference = {
                 "Qid": qid,
@@ -122,16 +122,20 @@ class AgentUtils:
         with open(template, 'r', encoding='utf-8') as file:
             templates = yaml.safe_load(file)
 
-        weaviate_query_input_template = templates['weaviate_query_input_template']
+        weaviate_query_input_template = templates['weaviate_query_input_template_new']
 
         query_Input_prompt = PromptTemplate(
             input_variables=["text_input"],
             template=weaviate_query_input_template
         )
+
         weaviateQuery_chain = LLMChain(llm=self.llm, prompt=query_Input_prompt)
+
         analysis_result = weaviateQuery_chain.run(merged)
+
         qidQuery_result_str = "[]"
-        qid_match = re.search(r'Q[0-9]+', analysis_result)  # Assuming QID follows the format Q followed by numbers
+        qid_match = re.search(r'Q[0-9]+', analysis_result)
+        print(qid_match)
         qid = qid_match.group() if qid_match else None
 
         if qid:
