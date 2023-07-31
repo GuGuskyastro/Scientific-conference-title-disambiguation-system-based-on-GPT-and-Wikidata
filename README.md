@@ -36,13 +36,18 @@ The main file directory of the project is shown in the figure.
 
 ─accuracyTest
 │  │  acc_test.py                       # Testing the Processing Accuracy of Agent
+│  │  proofread.py                      # Verify output
+│  │  proofreading_results.yaml         # Test Results
+│  │  proofreadText.yml                 
+│  │  test_output.yaml                  
+│  │  testText.yaml                     # Previous test text, integrated into the yaml file
 │  │
-│  ├─testOutput                         # output result
+│  ├─testOutput                         # output result for old template
 │  │      citation1_output.txt
 │  │      ...
 │  │      citation10_output.txt
 │  │
-│  └─testText                           # citation text for testing
+│  └─testText                           # citation text for testing old template
 │          citation1.txt
 │          ...
 │          citation10.txt
@@ -53,7 +58,7 @@ The main file directory of the project is shown in the figure.
 │     api_connector.py                  # Connect GPT and Weaviate via API keys
 │     main.py                           
 │     weaviateQ.py
-│    
+│     templates.yaml                    # Store the prompt templates that need to be used in each tool and agent
 │
 ├─fronted
 │     front.html
@@ -67,4 +72,8 @@ The main file directory of the project is shown in the figure.
 │      weaviateVS.py                   # Create a vector database based on wikidata metadata
 │      wikidataConferenceJson.py       
 ```
+
+## Agent process
+
+## Current Agent Test Results
 
