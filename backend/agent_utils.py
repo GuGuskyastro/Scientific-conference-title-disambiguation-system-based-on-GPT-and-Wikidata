@@ -135,7 +135,6 @@ class AgentUtils:
 
         qidQuery_result_str = "[]"
         qid_match = re.search(r'Q[0-9]+', analysis_result)
-        print(qid_match)
         qid = qid_match.group() if qid_match else None
 
         if qid:
