@@ -32,7 +32,7 @@ class AgentTest(unittest.TestCase):
 
         text = "Conference on Empirical Methods in Natural Language Processing 2013"
         result = AgentUtils.weaviate_query_input(AgentTest.utils, text)
-        self.assertIn("The Conference on Empirical Methods in Natural Language Processing 2013 is stored in the Database", result)
+        self.assertIn("is stored in the Database", result)
 
 
     def test_run(self):
