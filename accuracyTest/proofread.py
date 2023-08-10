@@ -1,48 +1,96 @@
-import ruamel.yaml as yaml
+from backend.result_to_yaml import processResult
+import yaml
+import os
 
-def proofread_results(output_file, proofread_file):
-    with open(output_file, "r", encoding="utf-8") as output_data:
-        output_data = yaml.safe_load(output_data)
+def process_LLM_Result(result_file,output_file):
+    """
+    Process the previous natural language test results into computer-readable yaml form
 
-    with open(proofread_file, "r", encoding="utf-8") as proofread_data:
-        proofread_data = yaml.safe_load(proofread_data)
+    Args:
+        result_file (str): The yaml file need to be processed.
+        output_file (str): output yaml filename
 
-    results = {}
+    """
+    structured_result = []
+    with open(result_file,'r',encoding="utf-8") as r:
+        test_output = yaml.safe_load(r)
+        for i in test_output:
+            processResult(test_output[i]['result'])
+            with open('result.yaml', 'r', encoding="utf-8") as r2:
+                result = yaml.safe_load(r2)
+                structured_result.append(result)
 
-    for citation_key, proofread_citation in proofread_data.items():
-        if citation_key not in output_data:
-            results[citation_key] = "Missing citation in output."
-            continue
+    with open(output_file, "w", encoding="utf-8") as f:
+        yaml.dump(structured_result,f)
 
-        output_citation = output_data[citation_key]['result']
-        proofread_in_db = proofread_citation.get('conference(in database)', {})
-        proofread_not_in_db = proofread_citation.get('conference(not in database)', {})
-        proofread_total = proofread_citation.get('text with conference', {})
-        errors = []
+    os.remove('result.yaml')
 
-        # Check if conferences in the database are present in the output
-        for conf_key, conf_id in proofread_in_db.items():
-            if conf_id not in output_citation:
-                errors.append(f"Conference ID {conf_id} not found in the output for {citation_key}.")
+def organize_data(file):
+    """
+        The output of GPT may use different natural language words for " ", replace these as null values in yaml.
+        Eliminate some results which hvae extra quotes
 
-        # Check if conferences not in the database are present in the output
-        for conf_key, conf_name in proofread_not_in_db.items():
-            if conf_name not in output_citation:
-                errors.append(f"Conference name '{conf_name}' not found in the output for {citation_key}.")
+        Args:
+            file (str): The yaml file need to be processed.
 
-        # Check the total count of citations with conference information
-        if proofread_total not in output_citation:
-            errors.append(f"Expected text '{proofread_total}' not found in the output for {citation_key}.")
+    """
 
-        if not errors:
-            results[citation_key] = "Pass"
-        else:
-            results[citation_key] = ", ".join(errors)
+    not_exist = ['Not available','Not found in the database','Not applicable','Not stored in the database']
 
-    with open("proofreading_results.yaml", "w", encoding="utf-8") as result_file:
-        yaml.dump(results, result_file, default_style="|", default_flow_style=False, encoding="utf-8")
+    with open(file, 'r', encoding="utf-8") as r:
+        result = yaml.safe_load(r)
+        for i in range(len(result)):
+            for n in range(len(result[i])):
+                for m in result[i][n]['Conference Info']:
+                    if result[i][n]['Conference Info'][m] in not_exist:
+                        result[i][n]['Conference Info'][m] = None
+                    if result[i][n]['Conference Info'][m] is not None and '"' in result[i][n]['Conference Info'][m]:
+                        result[i][n]['Conference Info'][m] = result[i][n]['Conference Info'][m].strip('"')
 
-if __name__ == "__main__":
-    output_file = "test_output.yaml"
-    proofread_file = "proofreadText.yml"
-    proofread_results(output_file, proofread_file)
+    with open(file, 'w', encoding="utf-8") as w:
+        yaml.dump(result, w)
+
+def proofread_result(outputfile, profreadfile):
+    """
+        Check the output against the proofread text to see if there are any errors.
+
+        Args:
+            outputfile (str): The yaml file need to be proofread.
+            profreadfile (str):The yaml file with proofread text.
+
+        Returns:
+            List: Number of errors per test group.
+
+    """
+
+    with open(outputfile, 'r', encoding="utf-8") as r:
+        output = yaml.safe_load(r)
+    with open(profreadfile, 'r', encoding="utf-8") as r:
+        profread = yaml.safe_load(r)
+
+    results = []
+
+    for i in range(0, len(profread)):
+        errors = 0
+
+        for n in range(0, len(profread[i])):
+            profreadCitation = profread[i][n]['Citation text']
+            found_citation = False
+            for m in range(0, len(output[i])):
+                if profreadCitation in output[i][m]['Citation text']:
+                    found_citation = True
+                    if output[i][m]['Conference Info']['Conference Qid'] != profread[i][n]['Conference Info']['Conference Qid']:
+                        errors += 1
+                    break
+            if not found_citation:
+                errors += 1
+        results.append(errors)
+    return results
+
+if __name__ == '__main__':
+    process_LLM_Result('test_output_individually.yaml', 'structured_test_output_individually.yaml')
+    process_LLM_Result('test_output_integrate.yaml', 'structured_test_output_integrate.yaml')
+    process_LLM_Result('test_output_intergrate_gpt4.yaml', 'structured_test_output_integrate_gpt4.yaml')
+    organize_data('structured_test_output_individually.yaml')
+    organize_data('structured_test_output_integrate.yaml')
+    organize_data('structured_test_output_integrate_gpt4.yaml')
