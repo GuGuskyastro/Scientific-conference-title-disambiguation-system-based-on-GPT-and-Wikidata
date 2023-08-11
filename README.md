@@ -37,9 +37,10 @@ The main file directory of the project is shown in the figure.
 ─accuracyTest
 │  │  acc_test.py                       # Testing the Processing Accuracy of Agent
 │  │  proofread.py                      # Verify output
-│  │  proofreading_results.yaml         # Test Results
-│  │  proofreadText.yml                 
-│  │  test_output.yaml                  
+│  │  proofreadText.yml
+│  │  result_chart.py                   # Plot the results of the test
+│  │  test_output.yaml                      
+│  │  structured_test_output.yaml                
 │  │  testText.yaml                     # Previous test text, integrated into the yaml file
 │  │
 │  ├─testOutput                         # output result for old template
@@ -56,13 +57,14 @@ The main file directory of the project is shown in the figure.
 │     agent_build.py                    # Build custom Agent, consistent with lancghain documentation
 │     agent_utils.py                    # Functions used by Agent tools
 │     api_connector.py                  # Connect GPT and Weaviate via API keys
-│     main.py                           
+│     main.py
+│     result_to_yaml.py                 # Convert GPT natural language results into computer-readable structured data                          
 │     weaviateQ.py
 │     templates.yaml                    # Store the prompt templates that need to be used in each tool and agent
 │
-├─fronted
-│     front.html
-│     web.py
+├─frontednew
+│     dict_edit.py    
+│     main.py
 │
 ├─test
 │     agentTest.py                     # Test when update code
@@ -72,6 +74,11 @@ The main file directory of the project is shown in the figure.
 │      weaviateVS.py                   # Create a vector database based on wikidata metadata
 │      wikidataConferenceJson.py       
 ```
+The project puts most of the text, such as templates and test text, in yaml files. The yaml files such as structured_output are the processing results of the previous GPT natural language results. Its general structure is like:
+
+![image](https://github.com/GuGuskyastro/Scientific-conference-title-disambiguation-system-based-on-GPT-and-Wikidata/blob/main/chart/UML.png)
+
+Each citation containing a conference is stored in the yaml file as a combination of the citation text and specific conference information, which contains different metadata.
 
 ## Agent process
 
