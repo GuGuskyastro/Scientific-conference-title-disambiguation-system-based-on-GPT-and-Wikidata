@@ -76,4 +76,4 @@ The main file directory of the project is shown in the figure.
 ## Agent process
 
 ## Current Agent Test Results
-see [test eavluation](https://github.com/GuGuskyastro/Scientific-conference-title-disambiguation-system-based-on-GPT-and-Wikidata/blob/main/README.md)
+see [test eavluation](https://github.com/GuGuskyastro/Scientific-conference-title-disambiguation-system-based-on-GPT-and-Wikidata/blob/main/evaluation/test_evaluation.md)
