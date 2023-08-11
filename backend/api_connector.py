@@ -11,7 +11,7 @@ class APIConnector:
 
         # Weaviate client
         self.client = weaviate.Client(
-            url=os.environ['WEAVIATE_URL'],,
+            url=os.environ['WEAVIATE_URL'],
             auth_client_secret=weaviate.AuthApiKey(api_key=os.environ['WEAVIATE_API_KEY']),
             additional_headers={
                 "X-HuggingFace-Api-Key": os.environ['HUGGINGFACE_API_KEY']
