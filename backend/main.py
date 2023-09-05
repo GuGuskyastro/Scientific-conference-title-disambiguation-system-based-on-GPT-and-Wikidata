@@ -72,7 +72,7 @@ class Agent:
 
     def generate_result(self,text,show_token=True,use_integrate_agent=False):
         """
-        Prcess the user input and give the structured data as final result.
+        Process the user input and give the structured data as final result.
 
         Args:
             text (str): User input, which in the case of this agent should be the citations text of the paper.
