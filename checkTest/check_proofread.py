@@ -1,16 +1,6 @@
 import yaml
 
 
-def organize_data(file):
-    with open(file, 'r', encoding="utf-8") as r:
-        result = yaml.safe_load(r)
-        for i in range(len(result)):
-            for n in result[i]['Conference Info']:
-                if result[i]['Conference Info'][n] is not None and '"' in result[i]['Conference Info'][n]:
-                    result[i]['Conference Info'][n] = result[i]['Conference Info'][n].strip('"')
-
-    with open(file, 'w', encoding="utf-8") as w:
-        yaml.dump(result, w)
 
 def proofread_result(outputfile, profreadfile):
 
@@ -38,12 +28,10 @@ def proofread_result(outputfile, profreadfile):
     return errors
 
 if __name__ == '__main__':
-    organize_data('result_all.yaml')
-    organize_data('result_all_after_check.yaml')
-    organize_data('result_all_gpt3.5.yaml')
-    organize_data('result_all_after_check_gpt3.5.yaml')
-
     proofread_result('result_all.yaml','proofreadText.yaml')
-    proofread_result('result_all_after_check.yaml','proofreadText.yaml')
+    proofread_result('result_all_after_correction1.yaml','proofreadText.yaml')
+    proofread_result('result_all_after_correction2.yaml', 'proofreadText.yaml')
+
     proofread_result('result_all_gpt3.5.yaml','proofreadText.yaml')
-    proofread_result('result_all_after_check_gpt3.5.yaml','proofreadText.yaml')
+    proofread_result('result_all_after_correction1_gpt3.5.yaml','proofreadText.yaml')
+    proofread_result('result_all_after_correction2_gpt3.5.yaml', 'proofreadText.yaml')
