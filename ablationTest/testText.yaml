@@ -1,0 +1,92 @@
+- name: citation1
+  text:
+    A: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In 8th International Conference on Learning Representations,2020, Addis Ababa, Ethiopia, April 26–30, 2020. OpenReview.net, April 2020"
+    B: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In International Conference on Learning Representations,2020, Addis Ababa, Ethiopia, April 26–30, 2020. OpenReview.net, April 2020"
+    C: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In 8th International Conference on Learning Representations, Addis Ababa, Ethiopia,OpenReview.net"
+    D: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In 8th Conference on Learning Representations,2020, Addis Ababa, Ethiopia, April 26–30, 2020. OpenReview.net, April 2020"
+    E: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In Conference Learning Representations,2020, Addis Ababa, Ethiopia, April 26–30, 2020. OpenReview.net, April 2020"
+    F: "Pablo Barceló, Egor V. Kostylev, Mikael Monet, Jorge Peréz, Juan Reutter, and Juan Pablo Silva. The Logical Expressiveness of Graph Neural Networks. In 8th Conference on Learning Representations, Addis Ababa, Ethiopia,OpenReview.net"
+
+- name: citation2
+  text:
+    A: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the 24th International Conference on World Wide Web,2015, Florence, Italy, May 18-22, 2015, May 2015. ACM Press"
+    B: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the International Conference on World Wide Web,2015, Florence, Italy, May 18-22, 2015, May 2015. ACM Press"
+    C: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the 24th International Conference on World Wide Web, Florence, Italy, ACM Press"
+    D: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the 24th Conference World Wide Web,2015, Florence, Italy, May 18-22, 2015, May 2015. ACM Press"
+    E: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the Conference World Wide Web,2015, Florence, Italy, May 18-22, 2015, May 2015. ACM Press"
+    F: "Aldo Gangemi, Stefano Leonardi, and Alessandro Panconesi, editors. Proceedings of the 24th Conference World Wide Web, Florence, Italy, ACM Press"
+
+- name: citation3
+  text:
+    A: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors. 8th International Semantic Web Conference, 2009, Chantilly, VA, USA, October 25-29, 2009. Proceedings, volume 5823 of Lecture Notes in Computer Science, October 2009. Springer"
+    B: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors. International Semantic Web Conference, 2009, Chantilly, VA, USA, October 25-29, 2009. Proceedings, volume 5823 of Lecture Notes in Computer Science, October 2009. Springer"
+    C: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors.  8th International Semantic Web Conference, Chantilly, VA, USA, Proceedings, volume 5823 of Lecture Notes in Computer Science, Springer"
+    D: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors.  8th Semantic Web Conference, 2009, Chantilly, VA, USA, October 25-29, 2009. Proceedings, volume 5823 of Lecture Notes in Computer Science, October 2009. Springer"
+    E: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors. Semantic Web Conference, 2009, Chantilly, VA, USA, October 25-29, 2009. Proceedings, volume 5823 of Lecture Notes in Computer Science, October 2009. Springer"
+    F: "Abraham Bernstein, David R. Karger, Tom Heath, Lee Feigenbaum, Diana Maynard, Enrico Motta, and Krishnaprasad Thirunarayan, editors.  8th Semantic Web Conference, Chantilly, VA, USA, Proceedings, volume 5823 of Lecture Notes in Computer Science, Springer"
+
+- name: citation4
+  text:
+    A: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: 7th International Conference on Learning Representations,2019."
+    B: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: International Conference on Learning Representations,2019."
+    C: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: 7th International Conference on Learning Representations."
+    D: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: 7th Conference on Learning Representations,2019."
+    E: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: Conference on Learning Representations,2019."
+    F: "H. Dong, J. Mao, T. Lin, C. Wang, L. Li, D. Zhou, Neural logic machines, in: 7th Conference on Learning Representations."
+
+- name: citation5
+  text:
+    A: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the 23rd International Conference on Data Engineering,2007, The Marmara Hotel, Istanbul, Turkey, April 15-20, 2007, pages 106–115."
+    B: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the International Conference on Data Engineering,2007, The Marmara Hotel, Istanbul, Turkey, April 15-20, 2007, pages 106–115."
+    C: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the 23rd International Conference on Data Engineering,The Marmara Hotel, Istanbul, Turkey, pages 106–115."
+    D: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the 23rd Conference on Data Engineering,2007, The Marmara Hotel, Istanbul, Turkey, April 15-20, 2007, pages 106–115."
+    E: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the Conference on Data Engineering,2007, The Marmara Hotel, Istanbul, Turkey, April 15-20, 2007, pages 106–115."
+    F: "Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. t-closeness: Privacy beyond k-anonymity and l-diversity. In Rada Chirkova, Asuman Dogac, M. Tamer Özsu, and Timos K. Sellis, editors, Proceedings of the 23rd Conference on Data Engineering,The Marmara Hotel, Istanbul, Turkey, pages 106–115."
+
+- name: citation6
+  text:
+    A: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In 2013 IEEE Seventh International Conference on Semantic Computing, Irvine, CA, USA, September 16-18, 2013, pages 78–85. IEEE Computer Society, September 2013."
+    B: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In 2013 IEEE International Conference on Semantic Computing, Irvine, CA, USA, September 16-18, 2013, pages 78–85. IEEE Computer Society, September 2013."
+    C: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In IEEE Seventh International Conference on Semantic Computing, Irvine, CA, USA, pages 78–85. IEEE Computer Society."
+    D: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In 2013 IEEE Seventh Conference on Semantic Computing, Irvine, CA, USA, September 16-18, 2013, pages 78–85. IEEE Computer Society, September 2013."
+    E: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In 2013 IEEE Conference on Semantic Computing, Irvine, CA, USA, September 16-18, 2013, pages 78–85. IEEE Computer Society, September 2013."
+    F: "Jennifer Sleeman and Tim Finin. Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs. In IEEE Seventh Conference on Semantic Computing, Irvine, CA, USA, pages 78–85. IEEE Computer Society."
+
+- name: citation7
+  text:
+    A: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the 3rd International Conference on Knowledge Capture, October 2–5, 2005, Banff, Alberta, Canada, pages 51–58. ACM, 2005."
+    B: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the International Conference on Knowledge Capture, October 2–5, 2005, Banff, Alberta, Canada, pages 51–58. ACM, 2005."
+    C: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the 3rd International Conference on Knowledge Capture, Banff, Alberta, Canada, pages 51–58. ACM."
+    D: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the 3rd  Conference on Knowledge Capture, October 2–5, 2005, Banff, Alberta, Canada, pages 51–58. ACM, 2005."
+    E: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the Conference on Knowledge Capture, October 2–5, 2005, Banff, Alberta, Canada, pages 51–58. ACM, 2005."
+    F: "H. Alani and C. Brewster. Ontology ranking based on the analysis of concept structures. In P. Clark and G. Schreiber, editors, Proceedings of the 3rd Conference on Knowledge Capture, Banff, Alberta, Canada, pages 51–58. ACM."
+
+- name: citation8
+  text:
+    A: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - 16th International Conference on Applications of Natural Language to Information Systems, Alicante, Spain, June 28-30, 2011. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer, 2011."
+    B: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - International Conference on Applications of Natural Language to Information Systems, Alicante, Spain, June 28-30, 2011. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer, 2011."
+    C: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - 16th International Conference on Applications of Natural Language to Information Systems, Alicante, Spain. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer."
+    D: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - 16th Conference on Applications of Natural Language to Information Systems, Alicante, Spain, June 28-30, 2011. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer, 2011."
+    E: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - Conference on Applications of Natural Language to Information Systems, Alicante, Spain, June 28-30, 2011. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer, 2011."
+    F: "André Freitas, João Gabriel Oliveira, Seán O’Riain, Edward Curry, and João Carlos Pereira da Silva. Treo: Best-Effort Natural Language Queries over Linked Data. In Rafael Muñoz, Andrés Montoyo, and Elisabeth Métais, editors, Natural Language Processing and Information Systems - 16th Conference on Applications of Natural Language to Information Systems, Alicante, Spain. Proceedings, volume 6716 of Lecture Notes in Computer Science, pages 286–289. Springer."
+
+- name: citation9
+  text:
+    A: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: 4th International Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64."
+    B: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: International Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64."
+    C: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: 4th International Conference on Decision and Game Theory for Security, Springer, pp. 45–64."
+    D: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: 4th Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64."
+    E: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: Conference on Decision and Game Theory for Security, Springer, 2013, pp. 45–64."
+    F: "C. Barreto, A. A. Cárdenas, N. Quijano, Controllability of dynamical systems: Threat models and reactive security, in: 4th Conference on Decision and Game Theory for Security, Springer, pp. 45–64."
+
+- name: citation10
+  text:
+    A: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the 12th ACM SIGPLAN International Conference on Software Language Engineering, Athens, Greece, October 20-22, 2019, pages 152–166. ACM Press, October 2019."
+    B: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the ACM SIGPLAN International Conference on Software Language Engineering, Athens, Greece, October 20-22, 2019, pages 152–166. ACM Press, October 2019."
+    C: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the 12th ACM SIGPLAN International Conference on Software Language Engineering, Athens, Greece, pages 152–166. ACM Press."
+    D: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the 12th ACM SIGPLAN Conference on Software Language Engineering, Athens, Greece, October 20-22, 2019, pages 152–166. ACM Press, October 2019."
+    E: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the ACM SIGPLAN Conference on Software Language Engineering, Athens, Greece, October 20-22, 2019, pages 152–166. ACM Press, October 2019."
+    F: "Philipp Seifer, Johannes Härtel, Martin Leinberger, Ralf Lämmel, and Steffen Staab. Empirical study on the usage of graph query languages in open source Java projects. In Oscar Nierstrasz, Jeff Gray, and Bruno C. d. S. Oliveira, editors, Proceedings of the 12th ACM SIGPLAN Conference on Software Language Engineering, Athens, Greece, pages 152–166. ACM Press."
+
+
+
