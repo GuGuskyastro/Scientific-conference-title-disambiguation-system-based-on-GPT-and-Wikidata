@@ -2,12 +2,14 @@ import yaml, os
 from langchain import PromptTemplate,LLMChain
 from backend.agent_utils import AgentUtils
 from backend.api_connector import APIConnector
+from backend.main import Agent
 
 model = 'gpt-4'
 connector = APIConnector(model_name=model)
 llm = connector.llm
 client = connector.client
 utils = AgentUtils(llm=llm, client=client)
+agent = Agent(model_name=model)
 
 
 def check_metadata(filename):
@@ -15,7 +17,7 @@ def check_metadata(filename):
     Check the metadata according to the Qid in the output result to prevent GPT from making mistakes when summarizing the answer
 
     Args:
-        filename (str): output file.
+        filename (str): file need to be check.
 
     """
 
@@ -45,7 +47,7 @@ def check_match(filename):
         Send the output metadata and the original citation to GPT to determine whether it really matches.
 
         Args:
-            filename (str): output file.
+            filename (str): file need to be check.
 
         Returns:
             The re-judgment result of GPT.
@@ -86,3 +88,83 @@ def check_match(filename):
 
     return llm_chain.apply(input_list)
 
+
+def correction_replace_empty(filename,filename_after_check):
+    """
+            Correction method 1 based on the check results, this method will empty the error entry.
+
+            Args:
+                filename (str): file need to be check.
+                filename_after_check (str): file after correction
+
+            Returns:
+                file corrected after using this method.
+
+    """
+
+    match_result = check_match(filename)
+    print(match_result)
+    check_list = []
+
+    with open(filename, "r", encoding="utf-8") as data:
+        result = yaml.safe_load(data)
+
+    for i in range(0, len(result)):
+        if result[i]['Conference Info']['Conference Qid'] is not None:
+            check_list.append(result[i]['Conference Info']['Conference Qid'])
+
+    for i in range(0, len(check_list)):
+        if match_result[i]['text'] == 'Wrong':
+            for n in range(0, len(result)):
+                if result[n]['Conference Info']['Conference Qid'] == check_list[i]:
+                    result[n]['Conference Info']['Conference Qid'] = None
+                    result[n]['Conference Info']['Conference startDate'] = None
+                    result[n]['Conference Info']['Conference endDate'] = None
+                    result[n]['Conference Info']['Conference location'] = None
+                    result[n]['Conference Info']['Conference officialWebsite'] = None
+
+    with open(filename_after_check, 'a', encoding="utf-8") as result_all_after_check_file:
+        yaml.dump(result, result_all_after_check_file)
+
+
+def correction_call_GPT4(filename,filename_after_check):
+    """
+        Correction method 2 based on the check results. This method re-calls GPT-4 to process the error entry and fills with the GPT-4 parsing result.
+
+        Args:
+            filename (str): file need to be check.
+            filename_after_check (str): file after correction
+
+        Returns:
+            file corrected after using this method.
+
+    """
+    match_result = check_match(filename)
+    print(match_result)
+    check_list = []
+
+    with open(filename, "r", encoding="utf-8") as data:
+        result = yaml.safe_load(data)
+
+    for i in range(0, len(result)):
+        if result[i]['Conference Info']['Conference Qid'] is not None:
+            check_list.append(result[i]['Conference Info']['Conference Qid'])
+
+    for i in range(0, len(check_list)):
+        if match_result[i]['text'] == 'Wrong':
+            for n in range(0, len(result)):
+                if result[n]['Conference Info']['Conference Qid'] == check_list[i]:
+                    text = result[n]['Citation text']
+                    Agent.generate_result(agent, text, show_token=True, use_integrate_agent=True,output_file='GPT4_correction.yaml')
+                    with open('GPT4_correction.yaml', "r", encoding="utf-8") as corr_data:
+                        correction = yaml.safe_load(corr_data)
+                    result[n]['Conference Info']['Conference Qid'] = correction[0]['Conference Info']['Conference Qid']
+                    result[n]['Conference Info']['Conference startDate'] = correction[0]['Conference Info']['Conference startDate']
+                    result[n]['Conference Info']['Conference endDate'] = correction[0]['Conference Info']['Conference endDate']
+                    result[n]['Conference Info']['Conference location'] = correction[0]['Conference Info']['Conference location']
+                    result[n]['Conference Info']['Conference officialWebsite'] = correction[0]['Conference Info']['Conference officialWebsite']
+
+
+
+    with open(filename_after_check, 'a', encoding="utf-8") as result_all_after_check_file:
+        yaml.dump(result, result_all_after_check_file)

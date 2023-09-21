@@ -1,7 +1,33 @@
 import re
 import yaml
 
-def processResult(input_text):
+
+def organize_data(file):
+    """
+        The output of GPT may use different natural language words for " ", replace these as null values in yaml.
+        Eliminate some results which have extra quotes
+
+        Args:
+            file (str): The yaml file need to be processed.
+
+    """
+
+    not_exist = ['Not available','Not found in the database','Not applicable','Not stored in the database','N/A']
+
+    with open(file, 'r', encoding="utf-8") as r:
+        result = yaml.safe_load(r)
+        for i in range(len(result)):
+            for n in result[i]['Conference Info']:
+                if result[i]['Conference Info'][n] in not_exist:
+                    result[i]['Conference Info'][n] = None
+                if result[i]['Conference Info'][n] is not None and '"' in result[i]['Conference Info'][n]:
+                    result[i]['Conference Info'][n] = result[i]['Conference Info'][n].strip('"')
+
+    with open(file, 'w', encoding="utf-8") as w:
+        yaml.dump(result, w)
+
+
+def processResult(input_text,output_file = "result.yaml"):
     """
     Convert GPT natural language results into computer-readable structured data
 
@@ -50,9 +76,10 @@ def processResult(input_text):
 
         result.append(citation_info)
 
-    output_file = "result.yaml"
     with open(output_file, "w", encoding="utf-8") as f:
         yaml.dump(result,f)
+
+    organize_data(output_file)
 
 
 

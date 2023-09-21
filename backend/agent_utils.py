@@ -109,7 +109,7 @@ class AgentUtils:
         response = (
             self.client.query
             .get("Conference", ["qid", "title", 'shortName'])
-            .with_limit(5)
+            .with_limit(6)
             .with_near_text({
                 "concepts": title
             })

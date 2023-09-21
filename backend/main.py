@@ -70,7 +70,7 @@ class Agent:
 
 
 
-    def generate_result(self,text,show_token=True,use_integrate_agent=False):
+    def generate_result(self,text,show_token=True,use_integrate_agent=False,output_file = 'result.yaml'):
         """
         Process the user input and give the structured data as final result.
 
@@ -83,7 +83,7 @@ class Agent:
             yaml file containing structured GPT result.
         """
         result = Agent.run(self,text,show_token,use_integrate_agent)
-        processResult(result)
+        processResult(result,output_file)
 
 
 

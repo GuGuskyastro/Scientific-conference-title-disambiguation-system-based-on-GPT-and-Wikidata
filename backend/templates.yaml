@@ -11,7 +11,7 @@ fact_extraction_template: |
         type: string
 
     When extracting, do not appear "Proceedings of" in the Conference title. A simple example:Saleem, M., Mehmood, Q., Ngonga Ngomo, A.C.: FEASIBLE: A Feature-Based SPARQL Benchmark Generation Framework. In: Proceedings of 14th International Semantic Web Conference. pp. 52–69. Springer (2015),
-    the Conference title for this citation then should be like International Semantic Web Conference 2015. The short name then is ISWC 2015. The year must be added to the title.
+    the Conference title for this citation then should be like 14th International Semantic Web Conference 2015. The short name then is ISWC 2015. The year of conference must be added to the title if mentioned in citation.
     References that do not mention scientific conferences can just use empty characters in the title and short name.
     Only use the information in the text to extract. If all citations do not have scientific meetings, tell the user that your input does not have any scientific meetings.
 
@@ -26,16 +26,17 @@ weaviate_query_input_template: |
 
 weaviate_query_input_template_new: |
     Work document: {text_input}
-    The extensionTitle in the Work document is the unofficial conference title I extracted, and the queryResult is the fuzzy search result of this title in the database, the queryResult include official title and abbreviation. Analyze whether the conference I extracted is also in the query result.
+    The extractionTitle in the Work document is the unofficial conference title I extracted, and the queryResult is the fuzzy search result of this title in the database, the queryResult include official title and abbreviation. Analyze whether the conference I extracted is also in the query result.
     Answer me in this template: The {{conference_title}} is/is not stored in the Database.(If stored then add)Its QID is {{QID}}.
-    Example: extensionTitle:International Conference on System Theory, Control and Computing 2020, queryResult: title: 23rd International Conference on System Theory, Control and Computing, shortName: ICSTCC 2019.
+    Example: extractionTitle:International Conference on System Theory, Control and Computing 2020, queryResult: title: 23rd International Conference on System Theory, Control and Computing, shortName: ICSTCC 2019.
     Answer for Example: The International Conference on System Theory, Control and Computing 2020 is not stored in the Database.
 
 
 base_template_individually: |
     You are now a text parsing assistant, and you receive a text of one or more citations from a paper. Strictly follow the following workflow to complete the task:
         For each citation in the input text,
-        1. Use Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. If the results of this step show that there is no information on any conference, skip the second step.
+        1. Use Extraction tool to parse the user input, that is, the user input text is used as the input of the tool. The tool will return the conference title and its possible short name contained in the citation. 
+        If the results of this step show that there is no information on any conference, skip the second step.
         2. Use Query tool to query conference title, that is, the title returned by Extraction tool is used as the input of query tool. 
         
         After operating all citations, summarize the results and give the final answer like:
@@ -51,19 +52,18 @@ base_template_individually: |
                 Conference location: 
                 Conference officialWebsite: 
                 }}
-        
-        You have access to the following tools:
-        
+    
+        You have access to the following tools:    
         {tools}
-        
-        Use the following format:
-        
+    
+        Use the following format:    
         Question: the input text from user
         Thought: Think about what you need to do.
         Action: Extraction / Query.
         Action Input: the input to the tool. 
         Observation: the result of the action
         ... (this Thought/Action/Action Input/Observation can repeat N times)
+    
         Thought: I now know the final answer
         Final Answer: the final answer according to the previous tips
         
@@ -110,3 +110,12 @@ base_template_intergrate: |
         
         Question: {input}
         {agent_scratchpad}
+
+
+check_template: |
+    I have a system that can parse out a possible conference in a citation text and give the possible metadata of the conference in Wikidata. You are now a calibration helper to check if the parsed result matches the conference in the text.
+    I will give you two text, one containing the original citation text and the extracted conference title, and other one with the possible detail conference metadata in Wikidata.
+    Compare the two texts and answer "Correct" if the conference described by the metadata actually the same to the conference in the citation text. Otherwise answer "Wrong". Note that the title description of conference and conference year may help you judge.
+    
+    two text:{infomation}
+    
