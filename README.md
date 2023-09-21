@@ -62,7 +62,7 @@ The main file directory of the project is shown in the figure.
 │     weaviateQ.py
 │     templates.yaml                    # Store the prompt templates that need to be used in each tool and agent
 │
-├─frontednew
+├─frontend
 │     dict_edit.py    
 │     main.py
 │
